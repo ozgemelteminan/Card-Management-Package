@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "CardManagement.Shared/1.0.0": {
+        "runtime": {
+          "CardManagement.Shared.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CardManagement.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

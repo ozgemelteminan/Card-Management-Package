@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "C8S0f8ze8LI=",
+  "success": true,
+  "projectFilePath": "/Users/ozge/Desktop/Card-Management-Package/src/Backoffice/Backoffice.API/Backoffice.API.csproj",
+  "expectedPackageFiles": [
+    "/Users/ozge/.nuget/packages/microsoft.aspnetcore.openapi/9.0.7/microsoft.aspnetcore.openapi.9.0.7.nupkg.sha512",
+    "/Users/ozge/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}

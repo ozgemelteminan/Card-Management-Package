@@ -1,0 +1,17 @@
+/Users/ozge/Desktop/Card-Management-Package/src/Backoffice/Backoffice.Service/bin/Debug/net9.0/Backoffice.Service.deps.json
+/Users/ozge/Desktop/Card-Management-Package/src/Backoffice/Backoffice.Service/bin/Debug/net9.0/Backoffice.Service.dll
+/Users/ozge/Desktop/Card-Management-Package/src/Backoffice/Backoffice.Service/bin/Debug/net9.0/Backoffice.Service.pdb
+/Users/ozge/Desktop/Card-Management-Package/src/Backoffice/Backoffice.Service/bin/Debug/net9.0/CardManagement.Data.dll
+/Users/ozge/Desktop/Card-Management-Package/src/Backoffice/Backoffice.Service/bin/Debug/net9.0/CardManagement.Shared.dll
+/Users/ozge/Desktop/Card-Management-Package/src/Backoffice/Backoffice.Service/bin/Debug/net9.0/CardManagement.Data.pdb
+/Users/ozge/Desktop/Card-Management-Package/src/Backoffice/Backoffice.Service/bin/Debug/net9.0/CardManagement.Shared.pdb
+/Users/ozge/Desktop/Card-Management-Package/src/Backoffice/Backoffice.Service/obj/Debug/net9.0/Backoffice.Service.csproj.AssemblyReference.cache
+/Users/ozge/Desktop/Card-Management-Package/src/Backoffice/Backoffice.Service/obj/Debug/net9.0/Backoffice.Service.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ozge/Desktop/Card-Management-Package/src/Backoffice/Backoffice.Service/obj/Debug/net9.0/Backoffice.Service.AssemblyInfoInputs.cache
+/Users/ozge/Desktop/Card-Management-Package/src/Backoffice/Backoffice.Service/obj/Debug/net9.0/Backoffice.Service.AssemblyInfo.cs
+/Users/ozge/Desktop/Card-Management-Package/src/Backoffice/Backoffice.Service/obj/Debug/net9.0/Backoffice.Service.csproj.CoreCompileInputs.cache
+/Users/ozge/Desktop/Card-Management-Package/src/Backoffice/Backoffice.Service/obj/Debug/net9.0/Backoffi.4553B18A.Up2Date
+/Users/ozge/Desktop/Card-Management-Package/src/Backoffice/Backoffice.Service/obj/Debug/net9.0/Backoffice.Service.dll
+/Users/ozge/Desktop/Card-Management-Package/src/Backoffice/Backoffice.Service/obj/Debug/net9.0/refint/Backoffice.Service.dll
+/Users/ozge/Desktop/Card-Management-Package/src/Backoffice/Backoffice.Service/obj/Debug/net9.0/Backoffice.Service.pdb
+/Users/ozge/Desktop/Card-Management-Package/src/Backoffice/Backoffice.Service/obj/Debug/net9.0/ref/Backoffice.Service.dll

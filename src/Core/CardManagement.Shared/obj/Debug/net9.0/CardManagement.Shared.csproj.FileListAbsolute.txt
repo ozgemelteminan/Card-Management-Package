@@ -1,0 +1,11 @@
+/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Shared/bin/Debug/net9.0/CardManagement.Shared.deps.json
+/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Shared/bin/Debug/net9.0/CardManagement.Shared.dll
+/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Shared/bin/Debug/net9.0/CardManagement.Shared.pdb
+/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Shared/obj/Debug/net9.0/CardManagement.Shared.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Shared/obj/Debug/net9.0/CardManagement.Shared.AssemblyInfoInputs.cache
+/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Shared/obj/Debug/net9.0/CardManagement.Shared.AssemblyInfo.cs
+/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Shared/obj/Debug/net9.0/CardManagement.Shared.csproj.CoreCompileInputs.cache
+/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Shared/obj/Debug/net9.0/CardManagement.Shared.dll
+/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Shared/obj/Debug/net9.0/refint/CardManagement.Shared.dll
+/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Shared/obj/Debug/net9.0/CardManagement.Shared.pdb
+/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Shared/obj/Debug/net9.0/ref/CardManagement.Shared.dll
