@@ -1,0 +1,12 @@
+C:\Users\MonsterPC\Desktop\Card-Management-Package\src\Merchant\Merchant.Service\bin\Debug\net9.0\Merchant.Service.deps.json
+C:\Users\MonsterPC\Desktop\Card-Management-Package\src\Merchant\Merchant.Service\bin\Debug\net9.0\Merchant.Service.dll
+C:\Users\MonsterPC\Desktop\Card-Management-Package\src\Merchant\Merchant.Service\bin\Debug\net9.0\Merchant.Service.pdb
+C:\Users\MonsterPC\Desktop\Card-Management-Package\src\Merchant\Merchant.Service\obj\Debug\net9.0\Merchant.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MonsterPC\Desktop\Card-Management-Package\src\Merchant\Merchant.Service\obj\Debug\net9.0\Merchant.Service.AssemblyInfoInputs.cache
+C:\Users\MonsterPC\Desktop\Card-Management-Package\src\Merchant\Merchant.Service\obj\Debug\net9.0\Merchant.Service.AssemblyInfo.cs
+C:\Users\MonsterPC\Desktop\Card-Management-Package\src\Merchant\Merchant.Service\obj\Debug\net9.0\Merchant.Service.csproj.CoreCompileInputs.cache
+C:\Users\MonsterPC\Desktop\Card-Management-Package\src\Merchant\Merchant.Service\obj\Debug\net9.0\Merchant.Service.sourcelink.json
+C:\Users\MonsterPC\Desktop\Card-Management-Package\src\Merchant\Merchant.Service\obj\Debug\net9.0\Merchant.Service.dll
+C:\Users\MonsterPC\Desktop\Card-Management-Package\src\Merchant\Merchant.Service\obj\Debug\net9.0\refint\Merchant.Service.dll
+C:\Users\MonsterPC\Desktop\Card-Management-Package\src\Merchant\Merchant.Service\obj\Debug\net9.0\Merchant.Service.pdb
+C:\Users\MonsterPC\Desktop\Card-Management-Package\src\Merchant\Merchant.Service\obj\Debug\net9.0\ref\Merchant.Service.dll

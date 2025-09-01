@@ -9,3 +9,15 @@
 /Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Data/obj/Debug/net9.0/refint/CardManagement.Data.dll
 /Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Data/obj/Debug/net9.0/CardManagement.Data.pdb
 /Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Data/obj/Debug/net9.0/ref/CardManagement.Data.dll
+C:\Users\MonsterPC\Desktop\Card-Management-Package\src\Core\CardManagement.Data\bin\Debug\net9.0\CardManagement.Data.deps.json
+C:\Users\MonsterPC\Desktop\Card-Management-Package\src\Core\CardManagement.Data\bin\Debug\net9.0\CardManagement.Data.dll
+C:\Users\MonsterPC\Desktop\Card-Management-Package\src\Core\CardManagement.Data\bin\Debug\net9.0\CardManagement.Data.pdb
+C:\Users\MonsterPC\Desktop\Card-Management-Package\src\Core\CardManagement.Data\obj\Debug\net9.0\CardManagement.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MonsterPC\Desktop\Card-Management-Package\src\Core\CardManagement.Data\obj\Debug\net9.0\CardManagement.Data.AssemblyInfoInputs.cache
+C:\Users\MonsterPC\Desktop\Card-Management-Package\src\Core\CardManagement.Data\obj\Debug\net9.0\CardManagement.Data.AssemblyInfo.cs
+C:\Users\MonsterPC\Desktop\Card-Management-Package\src\Core\CardManagement.Data\obj\Debug\net9.0\CardManagement.Data.csproj.CoreCompileInputs.cache
+C:\Users\MonsterPC\Desktop\Card-Management-Package\src\Core\CardManagement.Data\obj\Debug\net9.0\CardManagement.Data.sourcelink.json
+C:\Users\MonsterPC\Desktop\Card-Management-Package\src\Core\CardManagement.Data\obj\Debug\net9.0\CardManagement.Data.dll
+C:\Users\MonsterPC\Desktop\Card-Management-Package\src\Core\CardManagement.Data\obj\Debug\net9.0\refint\CardManagement.Data.dll
+C:\Users\MonsterPC\Desktop\Card-Management-Package\src\Core\CardManagement.Data\obj\Debug\net9.0\CardManagement.Data.pdb
+C:\Users\MonsterPC\Desktop\Card-Management-Package\src\Core\CardManagement.Data\obj\Debug\net9.0\ref\CardManagement.Data.dll

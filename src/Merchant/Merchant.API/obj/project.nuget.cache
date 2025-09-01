@@ -1,11 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "ZG9g/j95HO4=",
+  "dgSpecHash": "LvqV9wzS3Tw=",
   "success": true,
-  "projectFilePath": "/Users/ozge/Desktop/Card-Management-Package/src/Merchant/Merchant.API/Merchant.API.csproj",
+  "projectFilePath": "C:\\Users\\MonsterPC\\Desktop\\Card-Management-Package\\src\\Merchant\\Merchant.API\\Merchant.API.csproj",
   "expectedPackageFiles": [
-    "/Users/ozge/.nuget/packages/microsoft.aspnetcore.openapi/9.0.7/microsoft.aspnetcore.openapi.9.0.7.nupkg.sha512",
-    "/Users/ozge/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
+    "C:\\Users\\MonsterPC\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.7\\microsoft.aspnetcore.openapi.9.0.7.nupkg.sha512",
+    "C:\\Users\\MonsterPC\\.nuget\\packages\\microsoft.extensions.apidescription.server\\9.0.0\\microsoft.extensions.apidescription.server.9.0.0.nupkg.sha512",
+    "C:\\Users\\MonsterPC\\.nuget\\packages\\microsoft.openapi\\1.6.25\\microsoft.openapi.1.6.25.nupkg.sha512",
+    "C:\\Users\\MonsterPC\\.nuget\\packages\\swashbuckle.aspnetcore\\9.0.4\\swashbuckle.aspnetcore.9.0.4.nupkg.sha512",
+    "C:\\Users\\MonsterPC\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\9.0.4\\swashbuckle.aspnetcore.swagger.9.0.4.nupkg.sha512",
+    "C:\\Users\\MonsterPC\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\9.0.4\\swashbuckle.aspnetcore.swaggergen.9.0.4.nupkg.sha512",
+    "C:\\Users\\MonsterPC\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\9.0.4\\swashbuckle.aspnetcore.swaggerui.9.0.4.nupkg.sha512"
   ],
   "logs": []
 }

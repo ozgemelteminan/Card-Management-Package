@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>CardManagement.Data</id>
+    <version>1.0.0</version>
+    <authors>CardManagement.Data</authors>
+    <description>Package Description</description>
+    <repository type="git" commit="b0c70e78ced6fe71e16b18f6de2563905dbc41bb" />
+    <dependencies>
+      <group targetFramework="net9.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\MonsterPC\Desktop\Card-Management-Package\src\Core\CardManagement.Data\bin\Debug\net9.0\CardManagement.Data.dll" target="lib\net9.0\CardManagement.Data.dll" />
+  </files>
+</package>
