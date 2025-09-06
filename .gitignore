@@ -1,4 +1,24 @@
-# Mac system files
+# macOS system files
 .DS_Store
-bin
-.vs
+__MACOSX
+
+# Build outputs
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# MacOS
+.DS_Store
+
+# NuGet
+*.nupkg
+packages/
