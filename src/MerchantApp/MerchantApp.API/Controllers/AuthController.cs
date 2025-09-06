@@ -1,84 +1,79 @@
 using Microsoft.AspNetCore.Mvc;
-using MerchantApp.API.DTOs;
-using MerchantApp.API.Models;
-using MerchantApp.API.Data;
+using CardManagement.Shared.DTOs;
+using CardManagement.Shared.Interfaces;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using System.Security.Cryptography;
 
 namespace MerchantApp.API.Controllers;
 
-[ApiController]
-[Route("api/auth")]
+[ApiController] 
+[Route("api/auth")] // Defines the base route for this controller
 public class AuthController : ControllerBase
 {
-    private readonly AppDbContext _db;
-    private readonly IConfiguration _config;
+    private readonly IMerchantAuthService _authService; // Service for handling merchant authentication logic
+    private readonly IConfiguration _config; // Configuration object to access app settings (e.g., JWT key)
 
-    public AuthController(AppDbContext db, IConfiguration config)
+    public AuthController(IMerchantAuthService authService, IConfiguration config)
     {
-        _db = db;
+        _authService = authService;
         _config = config;
     }
 
-    // Register a new merchant
-    [HttpPost("register")]
-    public IActionResult Register([FromBody] MerchantRegisterDTO dto)
+    [HttpPost("register")] // Handles POST requests to api/auth/register
+    public async Task<IActionResult> Register([FromBody] MerchantRegisterDTO dto)
     {
-        // Prevent duplicate accounts
-        if (_db.Merchants.Any(x => x.Email == dto.Email))
-            return BadRequest("This email is already registered.");
+        if (!ModelState.IsValid) // Check if model validation failed
+            return BadRequest(ModelState);
 
-        // Create new merchant with hashed password
-        var merchant = new Merchant
+        try
         {
-            Name = dto.Name,
-            Email = dto.Email,
-            PasswordHash = HashPassword(dto.Password),  // SHA256 hash
-            CreatedAt = DateTime.UtcNow,
-            UpdatedAt = DateTime.UtcNow
-        };
+            // Register the merchant using the service
+            var merchant = await _authService.RegisterAsync(dto.Name, dto.Email, dto.Password);
 
-        _db.Merchants.Add(merchant);
-        _db.SaveChanges();
-
-        return Ok(new { merchant.MerchantId, merchant.Name, merchant.Email });
+            // Return merchant info (excluding password)
+            return Ok(new { merchant.MerchantId, merchant.Name, merchant.Email });
+        }
+        catch (InvalidOperationException ex)
+        {
+            // Return error if registration fails (e.g., duplicate email)
+            return BadRequest(ex.Message);
+        }
     }
 
-    // Login and return JWT token
-    [HttpPost("login")]
-    public IActionResult Login([FromBody] MerchantLoginRequestDTO dto)
+    [HttpPost("login")] // Handles POST requests to api/auth/login
+    public async Task<IActionResult> Login([FromBody] MerchantLoginRequestDTO dto)
     {
-        // Look up merchant by email
-        var user = _db.Merchants.FirstOrDefault(x => x.Email == dto.Email);
-        if (user == null) return Unauthorized();
+        if (!ModelState.IsValid) // Check if model validation failed
+            return BadRequest(ModelState);
 
-        // Check hashed password
-        if (!VerifyPassword(dto.PasswordHash, user.PasswordHash))
-            return Unauthorized();
+        // Attempt login with provided email and password
+        var user = await _authService.LoginAsync(dto.Email, dto.Password);
+        if (user == null) return Unauthorized("Invalid credentials.");
 
-        // Get secret signing key from configuration
-        var jwtKey = _config["Jwt:Key"] 
-                     ?? throw new InvalidOperationException("JWT key not found in configuration");
-
+        // Retrieve the JWT key from configuration
+        var jwtKey = _config["Jwt:Key"] ?? throw new InvalidOperationException("JWT key not found");
         var key = Encoding.UTF8.GetBytes(jwtKey);
+
+        // Define signing credentials using HMAC-SHA256
         var creds = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256);
-        var expires = DateTime.UtcNow.AddHours(1); // Token valid for 1 hour
+
+        // Token expiration time (1 hour)
+        var expires = DateTime.UtcNow.AddHours(1);
 
         // Create JWT token with claims
         var token = new JwtSecurityToken(
             claims: new[]
             {
-                new Claim("merchantId", user.MerchantId.ToString()),
-                new Claim(ClaimTypes.Name, user.Name)
+                new Claim("merchantId", user.MerchantId.ToString()), // Custom claim for merchant ID
+                new Claim(ClaimTypes.Name, user.Name) // Standard claim for merchant name
             },
             expires: expires,
             signingCredentials: creds
         );
 
-        // Return token response DTO
+        // Return login response with JWT token
         return Ok(new MerchantLoginResponseDTO
         {
             Token = new JwtSecurityTokenHandler().WriteToken(token),
@@ -86,19 +81,5 @@ public class AuthController : ControllerBase
             MerchantName = user.Name,
             ExpiresAt = expires
         });
-    }
-
-    // Utility: hash a password with SHA256
-    private string HashPassword(string password)
-    {
-        using var sha = SHA256.Create();
-        var bytes = sha.ComputeHash(Encoding.UTF8.GetBytes(password));
-        return Convert.ToBase64String(bytes);
-    }
-
-    // Utility: check if plain password matches stored hash
-    private bool VerifyPassword(string password, string hash)
-    {
-        return HashPassword(password) == hash;
     }
 }

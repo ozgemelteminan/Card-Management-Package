@@ -1,0 +1,12 @@
+/Users/ozge/Desktop/Card-Management-Package/src/Cardholder/Cardholder.Service/bin/Debug/net9.0/Cardholder.Service.deps.json
+/Users/ozge/Desktop/Card-Management-Package/src/Cardholder/Cardholder.Service/bin/Debug/net9.0/Cardholder.Service.dll
+/Users/ozge/Desktop/Card-Management-Package/src/Cardholder/Cardholder.Service/bin/Debug/net9.0/Cardholder.Service.pdb
+/Users/ozge/Desktop/Card-Management-Package/src/Cardholder/Cardholder.Service/obj/Debug/net9.0/Cardholder.Service.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ozge/Desktop/Card-Management-Package/src/Cardholder/Cardholder.Service/obj/Debug/net9.0/Cardholder.Service.AssemblyInfoInputs.cache
+/Users/ozge/Desktop/Card-Management-Package/src/Cardholder/Cardholder.Service/obj/Debug/net9.0/Cardholder.Service.AssemblyInfo.cs
+/Users/ozge/Desktop/Card-Management-Package/src/Cardholder/Cardholder.Service/obj/Debug/net9.0/Cardholder.Service.csproj.CoreCompileInputs.cache
+/Users/ozge/Desktop/Card-Management-Package/src/Cardholder/Cardholder.Service/obj/Debug/net9.0/Cardholder.Service.sourcelink.json
+/Users/ozge/Desktop/Card-Management-Package/src/Cardholder/Cardholder.Service/obj/Debug/net9.0/Cardholder.Service.dll
+/Users/ozge/Desktop/Card-Management-Package/src/Cardholder/Cardholder.Service/obj/Debug/net9.0/refint/Cardholder.Service.dll
+/Users/ozge/Desktop/Card-Management-Package/src/Cardholder/Cardholder.Service/obj/Debug/net9.0/Cardholder.Service.pdb
+/Users/ozge/Desktop/Card-Management-Package/src/Cardholder/Cardholder.Service/obj/Debug/net9.0/ref/Cardholder.Service.dll

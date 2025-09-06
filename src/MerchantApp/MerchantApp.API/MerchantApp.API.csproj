@@ -6,20 +6,27 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-<ItemGroup>
-  <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.1" />
-  <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.8" />
-  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.8" />
-  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.8" />
-  <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.8">
-    <PrivateAssets>all</PrivateAssets>
-    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-  </PackageReference>
-  <PackageReference Include="QRCoder" Version="1.6.0" />
-  <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.3" />
-  <PackageReference Include="System.Drawing.Common" Version="9.0.8" />
+  <ItemGroup>
+    <!-- Temel paketler -->
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="QRCoder" Version="1.6.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.4" />
+    <PackageReference Include="System.Drawing.Common" Version="9.0.8" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.4" PrivateAssets="all" />
+  </ItemGroup>
 
-  <!-- mevcut paketlerin kalsın (Swagger, FluentValidation vs.) -->
-</ItemGroup>
+  <ItemGroup>
+    <!-- Shared projesine referans -->
+    <ProjectReference Include="..\..\Core\CardManagement.Shared\CardManagement.Shared.csproj" />
+    <ProjectReference Include="..\..\Core\CardManagement.Data\CardManagement.Data.csproj" />
+    <ProjectReference Include="..\MerchantAppService\MerchantApp.Service.csproj" />
+  </ItemGroup>
 
 </Project>

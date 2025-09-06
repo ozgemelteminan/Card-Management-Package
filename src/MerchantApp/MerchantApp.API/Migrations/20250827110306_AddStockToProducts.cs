@@ -5,18 +5,19 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace MerchantApp.API.Migrations
 {
-    /// <inheritdoc />
+    // Migration to add stock tracking to products and UpdatedAt column to transactions
     public partial class AddStockToProducts : Migration
     {
-        /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            // Add a nullable UpdatedAt column to the Transactions table
             migrationBuilder.AddColumn<DateTime>(
                 name: "UpdatedAt",
                 table: "Transactions",
                 type: "datetime2",
                 nullable: true);
 
+            // Add a Stock column to the Products table with default value 0
             migrationBuilder.AddColumn<int>(
                 name: "Stock",
                 table: "Products",
@@ -25,13 +26,14 @@ namespace MerchantApp.API.Migrations
                 defaultValue: 0);
         }
 
-        /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            // Remove the UpdatedAt column from Transactions
             migrationBuilder.DropColumn(
                 name: "UpdatedAt",
                 table: "Transactions");
 
+            // Remove the Stock column from Products
             migrationBuilder.DropColumn(
                 name: "Stock",
                 table: "Products");

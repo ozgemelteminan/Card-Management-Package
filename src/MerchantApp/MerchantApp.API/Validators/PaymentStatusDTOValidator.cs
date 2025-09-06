@@ -1,9 +1,11 @@
 using FluentValidation;
+using CardManagement.Shared.DTOs;
+using System.Linq;
 
 namespace MerchantApp.API.Validators
 {
-    /// Ensures that transaction ID and status values are valid.
-    public class PaymentStatusDTOValidator : AbstractValidator<DTOs.PaymentStatusDTO>
+    // Validator for payment status DTOs
+    public class PaymentStatusDTOValidator : AbstractValidator<PaymentStatusDTO>
     {
         public PaymentStatusDTOValidator()
         {

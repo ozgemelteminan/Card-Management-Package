@@ -1,22 +1,24 @@
 using FluentValidation;
+using CardManagement.Shared.DTOs;
+using CardManagement.Shared.Models; 
 
 namespace MerchantApp.API.Validators
 {
-    // Validator for the CartDTO object
-    public class CartDTOValidator : AbstractValidator<DTOs.CartDTO>
+    // Validator for CartDTO using FluentValidation
+    public class CartDTOValidator : AbstractValidator<CartDTO>
     {
         public CartDTOValidator()
         {
-            // Rule: MerchantId must be greater than 0 (a valid ID)
+            // MerchantId must be greater than 0
             RuleFor(x => x.MerchantId)
                 .GreaterThan(0).WithMessage("Invalid Merchant ID.");
 
-            // Rule: The cart must not be empty
+            // The cart must have at least one item
             RuleFor(x => x.Items)
                 .NotEmpty().WithMessage("Cart cannot be empty.");
 
-            // Rule: For each item in Items, apply the CartItemDTOValidator
-            RuleForEach(x => x.Items)
+            // Each item in the cart is validated using CartItemDTOValidator
+            RuleForEach<CartItemDTO>(x => x.Items)
                 .SetValidator(new CartItemDTOValidator());
         }
     }

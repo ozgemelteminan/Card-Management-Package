@@ -1,66 +1,64 @@
 using Microsoft.AspNetCore.Mvc;
-using MerchantApp.API.Data;
-using MerchantApp.API.Models;
-using MerchantApp.API.DTOs;
+using CardManagement.Shared.DTOs;   
+using CardManagement.Shared.Models;   
+using MerchantApp.Service.Services; 
 
 namespace MerchantApp.API.Controllers
 {
-    [ApiController]
-    [Route("api/cards")]
+    [ApiController] 
+    [Route("api/cards")] // All endpoints in this controller will be under /api/cards
     public class CardsController : ControllerBase
     {
-        private readonly AppDbContext _db;
-        public CardsController(AppDbContext db) => _db = db;
+        private readonly ICardService _cardService; // Service for card-related operations
 
-        // Create a new card
-        [HttpPost("create")]
-        public IActionResult CreateCard([FromBody] CardCreateDTO dto)
+        public CardsController(ICardService cardService)
         {
-            // Check if the referenced cardholder exists
-            var cardholder = _db.Cardholders.FirstOrDefault(c => c.CardholderId == dto.CardholderId);
-            if (cardholder == null) 
-                return NotFound("Cardholder not found");
-
-            // Map DTO to Card entity
-            var card = new Card
-            {
-                CardholderId = dto.CardholderId,
-                CardNumber = dto.CardNumber,
-                ExpiryDate = dto.ExpiryDate,
-                CVV = dto.CVV,
-                Pin = dto.Pin,
-                Balance = dto.Balance
-            };
-
-            // Save to database
-            _db.Cards.Add(card);
-            _db.SaveChanges();
-
-            // Do not return sensitive fields like PIN and CVV
-            return Ok(new
-            {
-                card.CardId,
-                card.CardholderId,
-                card.CardNumber,
-                card.ExpiryDate,
-                card.Balance
-            });
+            _cardService = cardService;
         }
 
-        // Get all cards (masked response, no sensitive data)
-        [HttpGet]
-        public IActionResult GetAll()
+        // POST: api/cards/create
+        // Creates a new card
+        [HttpPost("create")]
+        public async Task<IActionResult> CreateCard([FromBody] CardCreateDTO dto)
         {
-            var cards = _db.Cards.Select(card => new
+            try
+            {
+                // Create a card through the service
+                var card = await _cardService.CreateCardAsync(dto);
+
+                // Return the created card information
+                return Ok(new
+                {
+                    card.CardId,
+                    card.CardholderId,
+                    card.CardNumber,
+                    card.ExpiryDate,
+                    card.Balance
+                });
+            }
+            catch (KeyNotFoundException ex) // If the cardholder is not found
+            {
+                return NotFound(ex.Message); // Return 404 Not Found
+            }
+        }
+
+        // GET: api/cards
+        // Retrieves all cards
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            // Get all cards from the service
+            var cards = await _cardService.GetAllCardsAsync();
+
+            // Return cards in JSON format
+            return Ok(cards.Select(card => new
             {
                 card.CardId,
                 card.CardholderId,
                 card.CardNumber,
                 card.ExpiryDate,
                 card.Balance
-            }).ToList();
-
-            return Ok(cards);
+            }));
         }
     }
 }

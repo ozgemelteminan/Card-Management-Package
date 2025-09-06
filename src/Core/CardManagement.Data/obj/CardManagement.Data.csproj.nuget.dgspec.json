@@ -1,31 +1,100 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MonsterPC\\Desktop\\Card-Management-Package\\src\\Core\\CardManagement.Data\\CardManagement.Data.csproj": {}
+    "/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Data/CardManagement.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MonsterPC\\Desktop\\Card-Management-Package\\src\\Core\\CardManagement.Data\\CardManagement.Data.csproj": {
+    "/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Data/CardManagement.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MonsterPC\\Desktop\\Card-Management-Package\\src\\Core\\CardManagement.Data\\CardManagement.Data.csproj",
+        "projectUniqueName": "/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Data/CardManagement.Data.csproj",
         "projectName": "CardManagement.Data",
-        "projectPath": "C:\\Users\\MonsterPC\\Desktop\\Card-Management-Package\\src\\Core\\CardManagement.Data\\CardManagement.Data.csproj",
-        "packagesPath": "C:\\Users\\MonsterPC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MonsterPC\\Desktop\\Card-Management-Package\\src\\Core\\CardManagement.Data\\obj\\",
+        "projectPath": "/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Data/CardManagement.Data.csproj",
+        "packagesPath": "/Users/ozge/.nuget/packages/",
+        "outputPath": "/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Data/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\MonsterPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/ozge/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Shared/CardManagement.Shared.csproj": {
+                "projectPath": "/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Shared/CardManagement.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Shared/CardManagement.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Shared/CardManagement.Shared.csproj",
+        "projectName": "CardManagement.Shared",
+        "projectPath": "/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Shared/CardManagement.Shared.csproj",
+        "packagesPath": "/Users/ozge/.nuget/packages/",
+        "outputPath": "/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Shared/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/ozge/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -49,6 +118,12 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.8, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -65,7 +140,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

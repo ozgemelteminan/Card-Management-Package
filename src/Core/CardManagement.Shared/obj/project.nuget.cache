@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "zPdXKxPEupM=",
+  "dgSpecHash": "AECarSPFNNY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\MonsterPC\\Desktop\\Card-Management-Package\\src\\Core\\CardManagement.Shared\\CardManagement.Shared.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Shared/CardManagement.Shared.csproj",
+  "expectedPackageFiles": [
+    "/Users/ozge/.nuget/packages/microsoft.entityframeworkcore.abstractions/9.0.8/microsoft.entityframeworkcore.abstractions.9.0.8.nupkg.sha512"
+  ],
   "logs": []
 }

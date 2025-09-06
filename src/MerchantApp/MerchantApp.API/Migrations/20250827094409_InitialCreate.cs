@@ -11,12 +11,13 @@ namespace MerchantApp.API.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            // Create Cardholders table
             migrationBuilder.CreateTable(
                 name: "Cardholders",
                 columns: table => new
                 {
                     CardholderId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("SqlServer:Identity", "1, 1"), // Auto-increment primary key
                     FullName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PasswordHash = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -27,6 +28,7 @@ namespace MerchantApp.API.Migrations
                     table.PrimaryKey("PK_Cardholders", x => x.CardholderId);
                 });
 
+            // Create CartItems table
             migrationBuilder.CreateTable(
                 name: "CartItems",
                 columns: table => new
@@ -44,6 +46,7 @@ namespace MerchantApp.API.Migrations
                     table.PrimaryKey("PK_CartItems", x => x.CartItemId);
                 });
 
+            // Create Merchants table
             migrationBuilder.CreateTable(
                 name: "Merchants",
                 columns: table => new
@@ -61,6 +64,7 @@ namespace MerchantApp.API.Migrations
                     table.PrimaryKey("PK_Merchants", x => x.MerchantId);
                 });
 
+            // Create Cards table
             migrationBuilder.CreateTable(
                 name: "Cards",
                 columns: table => new
@@ -82,9 +86,10 @@ namespace MerchantApp.API.Migrations
                         column: x => x.CardholderId,
                         principalTable: "Cardholders",
                         principalColumn: "CardholderId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Cascade); // Delete cards when cardholder is deleted
                 });
 
+            // Create Products table
             migrationBuilder.CreateTable(
                 name: "Products",
                 columns: table => new
@@ -107,6 +112,7 @@ namespace MerchantApp.API.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            // Create Transactions table
             migrationBuilder.CreateTable(
                 name: "Transactions",
                 columns: table => new
@@ -136,6 +142,7 @@ namespace MerchantApp.API.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            // Create TransactionProductDetails table
             migrationBuilder.CreateTable(
                 name: "TransactionProductDetails",
                 columns: table => new
@@ -165,6 +172,7 @@ namespace MerchantApp.API.Migrations
                         onDelete: ReferentialAction.Restrict);
                 });
 
+            // Create indexes for faster queries
             migrationBuilder.CreateIndex(
                 name: "IX_Cards_CardholderId",
                 table: "Cards",
@@ -199,26 +207,14 @@ namespace MerchantApp.API.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "CartItems");
-
-            migrationBuilder.DropTable(
-                name: "TransactionProductDetails");
-
-            migrationBuilder.DropTable(
-                name: "Products");
-
-            migrationBuilder.DropTable(
-                name: "Transactions");
-
-            migrationBuilder.DropTable(
-                name: "Cards");
-
-            migrationBuilder.DropTable(
-                name: "Merchants");
-
-            migrationBuilder.DropTable(
-                name: "Cardholders");
+            // Drop tables in reverse order of creation to maintain FK constraints
+            migrationBuilder.DropTable(name: "CartItems");
+            migrationBuilder.DropTable(name: "TransactionProductDetails");
+            migrationBuilder.DropTable(name: "Products");
+            migrationBuilder.DropTable(name: "Transactions");
+            migrationBuilder.DropTable(name: "Cards");
+            migrationBuilder.DropTable(name: "Merchants");
+            migrationBuilder.DropTable(name: "Cardholders");
         }
     }
 }

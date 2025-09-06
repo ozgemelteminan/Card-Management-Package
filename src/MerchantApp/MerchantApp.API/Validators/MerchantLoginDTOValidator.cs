@@ -1,21 +1,21 @@
 using FluentValidation;
+using CardManagement.Shared.DTOs;
 
 namespace MerchantApp.API.Validators
 {
-    /// Ensures that email and password meet the required rules.
-    public class MerchantLoginDTOValidator : AbstractValidator<DTOs.MerchantLoginRequestDTO>
+    // Validator for merchant login requests
+    public class MerchantLoginDTOValidator : AbstractValidator<MerchantLoginRequestDTO>
     {
         public MerchantLoginDTOValidator()
         {
-            // Email must not be empty and must be in a valid format
+            // Email must not be empty and must be a valid email format
             RuleFor(x => x.Email)
                 .NotEmpty().WithMessage("Email cannot be empty.")
                 .EmailAddress().WithMessage("Invalid email format.");
 
-            // Password must not be empty and must have at least 6 characters
+            // Password must not be empty
             RuleFor(x => x.Password)
-                .NotEmpty().WithMessage("Password cannot be empty.")
-                .MinimumLength(6).WithMessage("Password must be at least 6 characters long.");
+                .NotEmpty().WithMessage("Password cannot be empty.");
         }
     }
 }

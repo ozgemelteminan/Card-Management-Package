@@ -4,14 +4,88 @@
     "/Users/ozge/Desktop/Card-Management-Package/src/MerchantApp/MerchantApp.API/MerchantApp.API.csproj": {}
   },
   "projects": {
-    "/Users/ozge/Desktop/Card-Management-Package/src/MerchantApp/MerchantApp.API/MerchantApp.API.csproj": {
+    "/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Data/CardManagement.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ozge/Desktop/Card-Management-Package/src/MerchantApp/MerchantApp.API/MerchantApp.API.csproj",
-        "projectName": "MerchantApp.API",
-        "projectPath": "/Users/ozge/Desktop/Card-Management-Package/src/MerchantApp/MerchantApp.API/MerchantApp.API.csproj",
+        "projectUniqueName": "/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Data/CardManagement.Data.csproj",
+        "projectName": "CardManagement.Data",
+        "projectPath": "/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Data/CardManagement.Data.csproj",
         "packagesPath": "/Users/ozge/.nuget/packages/",
-        "outputPath": "/Users/ozge/Desktop/Card-Management-Package/src/MerchantApp/MerchantApp.API/obj/",
+        "outputPath": "/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Data/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/ozge/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Shared/CardManagement.Shared.csproj": {
+                "projectPath": "/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Shared/CardManagement.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Shared/CardManagement.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Shared/CardManagement.Shared.csproj",
+        "projectName": "CardManagement.Shared",
+        "projectPath": "/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Shared/CardManagement.Shared.csproj",
+        "packagesPath": "/Users/ozge/.nuget/packages/",
+        "outputPath": "/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Shared/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/ozge/.nuget/NuGet/NuGet.Config"
@@ -45,6 +119,82 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/ozge/Desktop/Card-Management-Package/src/MerchantApp/MerchantApp.API/MerchantApp.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ozge/Desktop/Card-Management-Package/src/MerchantApp/MerchantApp.API/MerchantApp.API.csproj",
+        "projectName": "MerchantApp.API",
+        "projectPath": "/Users/ozge/Desktop/Card-Management-Package/src/MerchantApp/MerchantApp.API/MerchantApp.API.csproj",
+        "packagesPath": "/Users/ozge/.nuget/packages/",
+        "outputPath": "/Users/ozge/Desktop/Card-Management-Package/src/MerchantApp/MerchantApp.API/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/ozge/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Data/CardManagement.Data.csproj": {
+                "projectPath": "/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Data/CardManagement.Data.csproj"
+              },
+              "/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Shared/CardManagement.Shared.csproj": {
+                "projectPath": "/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Shared/CardManagement.Shared.csproj"
+              },
+              "/Users/ozge/Desktop/Card-Management-Package/src/MerchantApp/MerchantAppService/MerchantApp.Service.csproj": {
+                "projectPath": "/Users/ozge/Desktop/Card-Management-Package/src/MerchantApp/MerchantAppService/MerchantApp.Service.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
             "FluentValidation.AspNetCore": {
               "target": "Package",
               "version": "[11.3.1, )"
@@ -52,6 +202,11 @@
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[9.0.8, )"
+            },
+            "Microsoft.CodeAnalysis.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.3.4, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -73,7 +228,7 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[9.0.3, )"
+              "version": "[9.0.4, )"
             },
             "System.Drawing.Common": {
               "target": "Package",
@@ -95,6 +250,121 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/ozge/Desktop/Card-Management-Package/src/MerchantApp/MerchantAppService/MerchantApp.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ozge/Desktop/Card-Management-Package/src/MerchantApp/MerchantAppService/MerchantApp.Service.csproj",
+        "projectName": "MerchantApp.Service",
+        "projectPath": "/Users/ozge/Desktop/Card-Management-Package/src/MerchantApp/MerchantAppService/MerchantApp.Service.csproj",
+        "packagesPath": "/Users/ozge/.nuget/packages/",
+        "outputPath": "/Users/ozge/Desktop/Card-Management-Package/src/MerchantApp/MerchantAppService/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/ozge/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Data/CardManagement.Data.csproj": {
+                "projectPath": "/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Data/CardManagement.Data.csproj"
+              },
+              "/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Shared/CardManagement.Shared.csproj": {
+                "projectPath": "/Users/ozge/Desktop/Card-Management-Package/src/Core/CardManagement.Shared/CardManagement.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.3.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[9.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.8, )"
+            },
+            "Microsoft.Extensions.Caching.Memory": {
+              "target": "Package",
+              "version": "[9.0.8, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.8, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[9.0.8, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.14.1, )"
+            },
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.6.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.9.3, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
