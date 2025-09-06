@@ -1,8 +1,8 @@
 # 🧾 MerchantApp.API Documentation
 
 MerchantApp.API is a **.NET 9 App API** for merchants to manage `products`, `carts`, `cards`, and `payments`.  
-It supports **JWT authentication**, **Entity Framework Core (SQL Server)**, **FluentValidation**, and provides a **Swagger UI**.
-
+It supports **JWT authentication**, **Entity Framework Core**, **FluentValidation**, and provides a **Swagger UI**.
+>Additional documentation for the Service and Test modules can be found in the `MerchantApp` folder
 
 ## 📖 Overview
 
